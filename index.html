@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcard Creator</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+  <body class="min-h-screen">
+  <header class="app-header">
+    <h1 class="text-2xl font-bold">Flashcard Creator</h1>
+  </header>
+  <main id="app" class="grid-cards-layout">
+    <section class="create-card flex flex-col gap-4">
+      <h2 class="text-xl font-semibold">Create Card</h2>
+      <form id="card-form" class="flex flex-col gap-3">
+        <label>
+          Front
+          <textarea id="front" required></textarea>
+        </label>
+        <label>
+          Back
+          <textarea id="back" required></textarea>
+        </label>
+        <button type="submit">Add Card</button>
+      </form>
+    </section>
+    <section class="cards-list flex flex-col gap-4">
+      <h2 class="text-xl font-semibold">Cards</h2>
+      <ul id="cards" class="flex flex-col gap-3"></ul>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

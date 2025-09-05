@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component layer additions */
+@layer base {
+  html, body { @apply bg-bg text-text min-h-full font-sans; }
+}
+
+@layer components {
+  .app-header { @apply px-8 py-4 bg-bg-alt border-b border-border; }
+  .card { @apply relative rounded-xl border border-border bg-bg-alt p-4; }
+  .card-front { @apply font-semibold mb-2; }
+  .card-actions { @apply absolute top-2 right-2 flex gap-1; }
+  .icon-btn { @apply border border-border rounded-md text-xs px-2 py-1 bg-transparent text-text transition-colors; }
+  .icon-btn:hover { @apply border-accent text-accent; }
+  .delete-btn:hover { @apply border-danger text-danger; }
+  .empty { @apply italic opacity-60; }
+  form label { @apply flex flex-col gap-1 text-[0.75rem] tracking-wide uppercase; }
+  form textarea { @apply resize-y min-h-20 rounded-lg border border-border bg-bg-alt text-text text-sm p-3 focus:outline-none focus:border-accent; }
+  form button[type=submit] { @apply cursor-pointer bg-accent hover:bg-accent-hover text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors; }
+}
+
+@layer utilities {
+  .grid-cards-layout { @apply max-w-[1200px] mx-auto p-6 grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]; }
+}
+
